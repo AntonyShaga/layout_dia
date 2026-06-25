@@ -2,16 +2,13 @@
   background-color: $c-page-bg;
 
   &__container {
-    padding-top: 120px;
     padding-bottom: 120px;
 
     @include on-tablet {
-      padding-top: 148px;
       padding-bottom: 148px;
     }
 
     @include on-small-desktop {
-      padding-top: 151px;
       padding-bottom: 186px;
     }
   }

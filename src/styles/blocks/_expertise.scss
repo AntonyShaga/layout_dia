@@ -39,6 +39,7 @@
   }
 
   &__card {
+    cursor: pointer;
     max-width: 280px;
 
     @include on-small-desktop {

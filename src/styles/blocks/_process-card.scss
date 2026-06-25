@@ -1,7 +1,7 @@
 .process-card {
   box-sizing: border-box;
   height: 264px;
-  padding: 32px;
+  padding: 31px;
   border-radius: 16px;
 
   background-color: $c-white-bg;
@@ -46,8 +46,9 @@
   }
 
   &__item {
-    @extend %text-14-regular;
+    @extend %section-text;
 
+    font-size: 13px;
     color: $c-text-secondary;
   }
 

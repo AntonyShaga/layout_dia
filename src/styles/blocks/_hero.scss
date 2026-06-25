@@ -98,10 +98,10 @@
   }
 
   &__button {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 
     @include on-tablet {
-      margin-bottom: 147px;
+      margin-bottom: 100px;
     }
 
     @include on-small-desktop {
