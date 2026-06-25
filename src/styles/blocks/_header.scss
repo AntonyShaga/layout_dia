@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__brand {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 45px;
+    height: 26px;
+    background-image: url('../images/logo/logo.svg');
+  }
+
+  &__nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @include on-small-desktop {
+      display: flex;
+    }
+  }
+
+  &__action {
+    @extend %label-white;
+  }
+
+  &__menu-button {
+    width: 24px;
+    height: 24px;
+    border: none;
+
+    background-color: inherit;
+    background-image: url('../images/menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include on-small-desktop {
+      display: none;
+    }
+  }
+}

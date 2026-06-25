@@ -1,0 +1,111 @@
+.hero {
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  background-color: $c-dark-bg;
+
+  @include on-small-desktop {
+    display: block;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+
+    @include on-small-desktop {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  &__header {
+    height: 30px;
+    padding-top: 20px;
+
+    @include on-small-desktop {
+      flex: 0 0 auto;
+      padding-top: 52px;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    flex: 1 1 auto;
+
+    min-height: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    @include on-small-desktop {
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      bottom: 0;
+
+      width: calc(50vw - 10px);
+      height: 85%;
+      border-top-right-radius: 0;
+    }
+
+    @include on-design {
+      width: calc(50vw - 113px);
+    }
+  }
+
+  &__content {
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: 48px;
+
+    @include on-small-desktop {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      justify-content: center;
+
+      width: 360px;
+      padding-top: 0;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    @extend %hero-title;
+
+    margin: 0 0 32px;
+  }
+
+  &__text {
+    @extend %text-14-regular;
+
+    margin: 0 0 72px;
+    font-size: 18px;
+    color: $c-text-white;
+
+    @include on-tablet {
+      margin: 0 0 56px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin-bottom: 147px;
+    }
+
+    @include on-small-desktop {
+      margin-bottom: 0;
+    }
+  }
+}
