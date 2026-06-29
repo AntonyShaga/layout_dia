@@ -6,8 +6,8 @@
   flex-direction: column;
 
   height: 100vh;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 1.88rem;
+  border-bottom-left-radius: 1.88rem;
 
   background-color: $c-dark-bg;
 
@@ -28,12 +28,13 @@
   }
 
   &__header {
-    height: 30px;
-    padding-top: 20px;
+    height: clamp(1.5rem, 4vh, 1.88rem);
+    padding-top: clamp(1rem, 3vh, 1.25rem);
 
     @include on-small-desktop {
       flex: 0 0 auto;
-      padding-top: 52px;
+      height: 1.88rem;
+      padding-top: 3.25rem;
     }
   }
 
@@ -42,9 +43,9 @@
     flex: 1 1 auto;
 
     min-height: 0;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-left-radius: 1.88rem;
+    border-top-right-radius: 1.88rem;
+    border-bottom-right-radius: 1.88rem;
 
     @include on-small-desktop {
       position: absolute;
@@ -52,20 +53,20 @@
       right: 0;
       bottom: 0;
 
-      width: calc(50vw - 10px);
+      width: calc(50vw - 0.63rem);
       height: 85%;
       border-top-right-radius: 0;
     }
 
     @include on-design {
-      width: calc(50vw - 113px);
+      width: calc(50vw - 7.06rem);
     }
   }
 
   &__content {
     flex-shrink: 0;
     width: 100%;
-    padding-top: 48px;
+    padding-top: clamp(1.5rem, 5vh, 3rem);
 
     @include on-small-desktop {
       display: flex;
@@ -73,35 +74,56 @@
       flex-direction: column;
       justify-content: center;
 
-      width: 360px;
+      width: 22.5rem;
       padding-top: 0;
-      padding-bottom: 80px;
+      padding-bottom: 5rem;
     }
   }
 
   &__title {
     @extend %hero-title;
 
-    margin: 0 0 32px;
+    margin: 0 0 clamp(1.25rem, 3.5vh, 2rem);
+    font-size: clamp(2.63rem, 8vh, 3.25rem);
+    line-height: 1.12;
+
+    @include on-tablet {
+      font-size: clamp(3rem, 8vh, 4rem);
+      line-height: 1.06;
+    }
+
+    @include on-small-desktop {
+      font-size: 4rem;
+      line-height: 4.25rem;
+    }
   }
 
   &__text {
     @extend %text-14-regular;
 
-    margin: 0 0 72px;
-    font-size: 18px;
+    margin: 0 0 clamp(2rem, 7vh, 4.5rem);
+    font-size: clamp(1rem, 2.8vh, 1.13rem);
+    line-height: 1.5;
     color: $c-text-white;
 
     @include on-tablet {
-      margin: 0 0 56px;
+      margin-bottom: clamp(2.5rem, 10vh, 6.25rem);
+    }
+
+    @include on-small-desktop {
+      margin-bottom: 5rem;
+      font-size: 1.13rem;
     }
   }
 
   &__button {
-    margin-bottom: 40px;
+    width: clamp(15rem, 70vw, 17.5rem);
+    height: clamp(3rem, 7vh, 3.5rem);
+    margin-bottom: clamp(1.5rem, 5vh, 2.5rem);
 
     @include on-tablet {
-      margin-bottom: 100px;
+      width: 16.5rem;
+      margin-bottom: clamp(2rem, 10vh, 6.25rem);
     }
 
     @include on-small-desktop {
